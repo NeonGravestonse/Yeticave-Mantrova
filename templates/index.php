@@ -28,7 +28,7 @@
                                 <span class="lot__cost"><?=sum_format($val["price"],true)?><b class="rub">р</b></span>
                             </div>
                             <div class="lot__timer timer">
-                                12:23
+                                <?=time()?>
                             </div>
                         </div>
                     </div>
