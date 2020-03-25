@@ -79,7 +79,16 @@ function include_template($name, $data) {
 
     $result = ob_get_clean();
 
-    return $result;
+    return $result;  
+}
+function time() {
+    $now = strtotime("now");
+    $tomorrow = strtotime("tomorrow");
+    $differencessec = $tomorrow - $now;
+    $differencech = floor($differencessec/3600); //перевести в часы
+    $difference = $differencessec - ($differencech*3600);
+    $differencemin = floor($difference/60); //перевод в минуты
+    $conchtime = sprintf("%d:%d", $differencech, $differencemin); return $conchtime;
 }
 ?>
 
